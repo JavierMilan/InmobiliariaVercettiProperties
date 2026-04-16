@@ -1,0 +1,147 @@
+.contacto-section {
+    position: relative;
+    background: linear-gradient(45deg, #080810db 0%, #0d1a14 70%);
+    padding: 40px 40px 28px 40px;
+    overflow: hidden;
+}
+
+.contacto-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.contacto-subtitle {
+    padding: 1em 12em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    margin: 0;
+    font-style: italic;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contacto-items {
+    background: url(imagenes/fondoVice1080.png), linear-gradient(90deg, #0e7391a3 0%, #e07bb2d5 100%);  
+    background-blend-mode: screen;
+    border-radius: 4px;
+    padding: 2em 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.contacto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.contacto-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #00ced1;
+}
+
+.contacto-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+    text-align: center;
+}
+
+.contacto-link:hover {
+    color: #e07bb2;
+}
+
+.contacto-footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72em;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 4px 0 0 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 14px;
+    width: 100%;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1200px) {
+    .contacto-items {
+        padding: 2em 10em;
+    }
+
+    .contacto-subtitle {
+        padding: 1em 6em;
+    }
+}
+
+@media (max-width: 900px) {
+    .contacto-items {
+        padding: 2em 4em;
+    }
+
+    .contacto-subtitle {
+        padding: 1em 3em;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 700px) {
+    .contacto-section {
+        padding: 30px 20px 20px 20px;
+    }
+
+    .contacto-subtitle {
+        padding: 1em 1em;
+        font-size: 0.95em;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .contacto-items {
+        flex-direction: column;
+        gap: 20px;
+        padding: 2em 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-subtitle {
+        font-size: 0.85em;
+        padding: 0.8em 0.5em;
+    }
+
+    .contacto-items {
+        padding: 1.5em 1em;
+        gap: 16px;
+    }
+
+    .contacto-label {
+        font-size: 0.85em;
+        letter-spacing: 2px;
+    }
+
+    .contacto-link {
+        font-size: 0.9em;
+    }
+}

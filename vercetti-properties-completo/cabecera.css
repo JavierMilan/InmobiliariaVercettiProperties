@@ -1,0 +1,209 @@
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+    position: fixed;
+    top: 1em;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    z-index: 100;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.cabecera--scrolled {
+    height: 6rem;
+    background-color: #c9cfd500;
+    border-bottom-color: #dd304d00;
+}
+
+.cabecera--scrolled .cabeceraBotones {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.cabecera img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cabecera img:hover {
+    transform: scale(1.05);
+}
+
+.cabecera--scrolled .logo img {
+    width: 140px;
+    cursor: pointer;
+}
+
+.cabecera .logo img {
+    transition: width 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.cabeceraBotones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cabeceraBotones ul {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.cabeceraBotones li {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 2.3rem;
+    list-style: none;
+}
+
+.cabeceraBotones a {
+    color: #eaf1f1;
+    text-decoration: none;
+    text-shadow:
+        1px 1px 1px #aa9359,
+        2px 2px 0px #000000,
+        2px 2px 4px #000000,
+        4px 4px 20px rgba(0, 0, 0, 0.498);
+}
+
+.cabeceraBotones a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.logoOpciones {
+    position: absolute;
+    filter: brightness(0) invert(1)
+            sepia(1) saturate(0.2)
+            hue-rotate(160deg) brightness(0.95);
+    text-decoration: none;
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+.logoOpciones:hover {
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.344));
+    border: #E07BB2 outset 1px;
+    background-color: #eaf1f1;
+    border-radius: 3px;
+    transform: rotate(20deg);
+}
+
+/* ── BOTÓN HAMBURGUESA ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: 1em;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #eaf1f1;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 3px black;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* MENÚ MÓVIL */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .cabeceraBotones {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(8, 8, 20, 0.97);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 150;
+    }
+
+    .cabeceraBotones.menu-open {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .cabeceraBotones ul {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .cabeceraBotones li {
+        font-size: 2.8rem;
+    }
+
+    .cabecera--scrolled .cabeceraBotones {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .cabeceraBotones.menu-open {
+        opacity: 1 !important;
+        pointer-events: all !important;
+    }
+
+    #lang-toggle {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        margin-right: 5em;
+    }
+
+    .logo img {
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 140px !important;
+    }
+
+    .cabeceraBotones li {
+        font-size: 2.2rem;
+    }
+
+    #lang-toggle {
+        margin-right: 4em;
+    }
+}

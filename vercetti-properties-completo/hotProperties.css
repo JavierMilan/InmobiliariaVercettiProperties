@@ -1,0 +1,255 @@
+.hotPropertiesContainer { 
+    background-image: url(imagenes/fondoPalmeras.png);
+    background-size: 103%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.755));
+    z-index: 5;
+}
+
+.hotPropertiesContainer h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 8em;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow:
+        1px 1px 0 #aa9359,
+        2px 2px 0 #967a3f,
+        3px 3px 0 #7d6530,
+        4px 4px 0 #6b5428,
+        5px 5px 0 #594420,
+        6px 6px 8px rgba(0, 0, 0, 0.809),
+        8px 8px 20px rgba(0, 0, 0, 0.649),
+        0 0 60px rgba(0, 0, 0, 0.152),
+        0 0 60px rgba(0, 0, 0, 0.374);
+}
+
+.hotProperties {
+    width: 95vw;
+    max-width: 113em;
+    height: 45em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.hotSection {
+    width: 24.5em;
+    height: 38em;
+    margin-bottom: 6em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4fafcaf;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.hotSection:hover {
+    background-color: #e9f4f8eb;
+}
+
+.hotSection img {
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    transition: all 0.4s;
+}
+
+.hotSection:hover img {
+    transform: translateY(-10px);
+}
+
+.hotSectionTop {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 2em;
+    gap: 18px;
+}
+
+.hotSection h2 {
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px 1px #6b7471;
+    font-size: 1.8em;
+    margin: 0;
+    color: rgb(8, 8, 20);
+}
+
+.hotSection h3 {
+    color: #11c47f;
+    text-shadow: 0px 3px 0 black;
+    font-size: 2.1em;
+    margin: 0;
+}
+
+.hotSection p {
+    color: rgb(20, 22, 6);
+    text-shadow: 1px 1px 1px #0d0e0e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: 85%;
+    margin-top: 20px;
+}
+
+.hotSection button { 
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    background-color: #e07bb2;
+    padding: 1em 2em 1em 1em;
+    position: relative;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(2deg);
+    clip-path: polygon(5% 0%, 90% 5%, 85% 85%, 0% 95%);
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hotSection button:hover {
+    background-color: #11c47f;
+    transform: scale(1.1);
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1587px) {
+      .hotPropertiesContainer {
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .hotProperties {
+        width: 95vw;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 2em;
+        padding: 1em 0 3em 0;
+    }
+
+    .hotSection {
+        width: calc(50% - 1em);
+        height: auto;
+        min-height: 32em;
+        margin-bottom: 0;
+        flex-shrink: 1;
+    }
+
+    .hotSection img {
+        width: 100%;
+        height: 16em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hotPropertiesContainer {
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .hotPropertiesContainer h1 {
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .hotPropertiesContainer h1 {
+        font-size: 4em;
+        padding: 0 0.5em;
+    }
+
+    .hotSection {
+        width: calc(50% - 1em);
+        height: auto;
+        min-height: 28em;
+    }
+
+    .hotSection img {
+        width: 100%;
+        height: 14em;
+    }
+
+    .hotSection h2 {
+        font-size: 1.4em;
+    }
+
+    .hotSection h3 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 700px) {
+    .hotPropertiesContainer h1 {
+        font-size: 3.2em;
+        padding: 0 0.3em;
+    }
+
+    .hotProperties {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90vw;
+        gap: 2em;
+        padding-bottom: 2em;
+    }
+
+    .hotSection {
+        width: 90vw;
+        height: auto;
+        min-height: unset;
+        margin-bottom: 0;
+    }
+
+    .hotSection img {
+        width: 100%;
+        height: 14em;
+    }
+
+    .hotSectionTop {
+        width: 88%;
+        gap: 12px;
+    }
+
+    .hotSection h2 {
+        font-size: 1.6em;
+    }
+
+    .hotSection h3 {
+        font-size: 1.6em;
+    }
+
+    .buttonContainer {
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .hotPropertiesContainer h1 {
+        font-size: 2.4em;
+    }
+
+    .hotSection h2 {
+        font-size: 1.3em;
+    }
+
+    .hotSection h3 {
+        font-size: 1.3em;
+    }
+}

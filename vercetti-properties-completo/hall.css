@@ -1,0 +1,106 @@
+.hall {
+    height: 100vh;
+    background-image:
+        linear-gradient(
+            180deg,
+            #e1d4c000 90%,
+            #E1D4C0 100%
+        ),
+        url(imagenes/fondoPropiedades.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10em;
+}
+
+.hallContenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fondoVice {
+    width: 100%;
+}
+
+.hallContenido img {
+    padding-top: 3.5em;
+    width: 50rem;
+}
+
+.hallContenido p {
+    padding-top: 1em;
+    font-family: "rageitalic";
+    font-size: 10em;
+    color: #FEFEFE;
+    text-align: center;
+    line-height: 0.8em;
+    text-shadow:
+        2px 3px 0 #E07BB2,
+        7px 6px 0 #000000,
+        0 0 20px rgba(0, 0, 0, 0.064),
+        0 0 30px rgb(0, 0, 0, 0.064),
+        0 0 60px rgba(0, 0, 0, 0.429),
+        0 0 60px rgba(0, 0, 0, 0.415);
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1024px) {
+    .hallContenido p {
+        font-size: 7em;
+    }
+
+    .hallContenido img {
+        width: 35rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hall {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 4em;
+    }
+
+    .hallContenido p {
+        font-size: 5em;
+        line-height: 0.9em;
+        padding: 0 0.5em;
+        padding-top: 3em;
+    }
+
+    .hallContenido img {
+        width: 25rem;
+        padding-top: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hall {
+        padding-bottom: 3em;
+    }
+
+    .hallContenido p {
+        font-size: 3.5em;
+        line-height: 1em;
+        padding: 0 0.3em;
+        padding-top: 2em;
+    }
+
+    .hallContenido img {
+        width: 18rem;
+        padding-top: 1.5em;
+    }
+}
+
+@media (max-width: 360px) {
+    .hallContenido p {
+        font-size: 2.8em;
+    }
+
+    .hallContenido img {
+        width: 14rem;
+    }
+}

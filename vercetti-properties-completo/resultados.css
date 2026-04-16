@@ -1,0 +1,348 @@
+body {
+    background-image: url(imagenes/fondoResultado.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 8rem;
+}
+
+.resultados-section {
+    padding: 60px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.resultados-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #eaf1f1;
+}
+
+.resultados-header h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 8em;
+    color: #eaf1f1;
+    text-align: center;
+    text-shadow:
+        1px 1px 0 #aa9359,
+        2px 2px 0 #967a3f,
+        3px 3px 0 #7d6530,
+        4px 4px 0 #6b5428,
+        5px 5px 0 #594420,
+        6px 6px 8px rgba(0, 0, 0, 0.809),
+        8px 8px 20px rgba(0, 0, 0, 0.649),
+        0 0 60px rgba(0, 0, 0, 0.152),
+        0 0 60px rgba(0, 0, 0, 0.374);   
+}
+
+.resultados-header p {
+    margin-top: 1em;
+    font-size: 3rem;
+    color: #eaf1f1;
+    background-color: #f4fafc7d;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #eaf1f1a9;
+    text-shadow:
+        1px 1px 0 #aa9359,
+        2px 2px 0 #967a3f,
+        3px 3px 0 #000000,
+        4px 4px 8px rgba(0, 0, 0, 0.809),
+        5px 5px 20px rgba(0, 0, 0, 0.649),
+        0 0 60px rgba(0, 0, 0, 0.152),
+        0 0 60px rgba(0, 0, 0, 0.374);
+}
+
+/* PROPIEDADES */
+.propiedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta de propiedad */
+.propiedad-card {
+    background-color: #eaf1f1e1;
+    padding-bottom: 1em;
+    box-shadow: 0 8px 25px rgb(0, 0, 0);
+    transition: all 0.3s, box-shadow 0.3s;
+}
+
+.propiedad-card:hover {
+    background-color: #e9f4f8;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.838);
+}
+
+/* Imagen de la propiedad */
+.propiedad-imagen-container {
+    position: relative;
+    height: 15em;
+    overflow: hidden;
+}
+
+.propiedad-imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.propiedad-card:hover .propiedad-imagen-container img {
+    transform: scale(1.1);
+}
+
+.badge-amueblada {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #11c47f;
+    color: #040000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.356);
+}
+
+/* INFO PROPIEDAD */
+.propiedad-info {
+    padding: 10px 30px;
+}
+
+.propiedadInfoPrincipal {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 15em;
+    height: auto;
+}
+
+.propiedad-info h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    color: #040000;
+    height: auto;
+    margin: 0.5em 0;
+}
+
+.contenedorZona {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    padding-top: 1em;
+}
+
+.logoZona {
+    height: 20px;
+    width: 20px;
+    background-color: #11c47f;
+    border-radius: 50px;
+    padding: 6px;
+    border: 1px black solid;
+}
+
+.zona {
+    font-family: "rageitalic";
+    color: #11c47f;
+    text-shadow: 1px 1px 0px black;
+    font-size: 2em;
+}
+
+.contenedorPrecioTipo {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.precio {
+    color: rgb(20, 22, 6);
+    text-shadow: 1px 1px 1px #0d0e0e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.tipo {
+    display: inline-block;
+    background-color: #11c47f;
+    color: #000000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.356);
+    margin-top: 0;
+}
+
+/* Características */
+.caracteristicas {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+}
+
+.caracteristicas span {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Contacto */
+.propiedad-contacto {
+    margin: 12px 0;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.propiedad-contacto small {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Botón ver más */
+.btn-ver-mas {
+    display: block;
+    width: 80%;
+    padding: 8px 5px;
+    background-color: #e07bb2;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 1px 5px #000000;
+    margin: auto;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.btn-ver-mas:hover {
+    background-color: #FED45A;
+    transform: scale(1.1);
+}
+
+/* Sin resultados */
+.no-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3em 1em 17em;
+}
+
+.no-resultados h2 {
+    margin-top: 1em;
+    font-size: 2.5rem;
+    color: #eaf1f1;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+.btn-primary {
+    text-decoration: none;
+    padding: 1em 2em;
+    background-color: #e07bb2;
+    color: #ffffff;
+    text-align: center;
+    border: 2px rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 1px 5px #000000;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #FED45A;
+    color: #000000;
+    border-color: #FED45A;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1024px) {
+    .resultados-header h1 {
+        font-size: 5em;
+    }
+
+    body {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 6rem;
+    }
+
+    .resultados-section {
+        padding: 40px 15px;
+    }
+
+    .resultados-header h1 {
+        font-size: 3.5em;
+    }
+
+    .resultados-header p {
+        font-size: 1.5rem;
+        padding: 0.8em;
+    }
+
+    .propiedades-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .propiedad-info {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resultados-header h1 {
+        font-size: 2.5em;
+    }
+
+    .resultados-header p {
+        font-size: 1.2rem;
+    }
+
+    .propiedad-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .zona {
+        font-size: 1.6em;
+    }
+
+    .precio {
+        font-size: 1.3rem;
+    }
+
+    .btn-ver-mas {
+        width: 90%;
+        font-size: 0.95rem;
+    }
+
+    .caracteristicas {
+        gap: 10px;
+    }
+
+    .caracteristicas span {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,329 @@
+/* ---- SECCIÓN CONTENEDOR ---- */
+
+.about-section {
+    position: relative;
+    background: linear-gradient(
+        45deg,
+        #E07BB2 0%,
+        rgb(255, 255, 255) 55%,
+        #1F8A9C 100%
+    ); 
+    padding: 10em;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(imagenes/fondoAboutCorto.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: screen;
+    filter: drop-shadow(0px 0px 20px black);
+    z-index: 0;
+}
+
+.about-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* ── COLUMNA IMAGEN ── */
+.about-image-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.about-image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+}
+
+.about-image-glow {
+    position: absolute;
+    inset: -15px;
+    background: radial-gradient(ellipse at center, rgba(255, 20, 147, 0.2) 0%, transparent 70%);
+    border-radius: 4px;
+    z-index: 0;
+}
+
+.about-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    filter: contrast(1.05) saturate(0.9);
+    box-shadow:
+        0 0 0 1px rgba(255, 20, 147, 0.3),
+        0 0 30px rgba(255, 20, 147, 0.15),
+        0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+.about-image-badge {
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    z-index: 2;
+    background: #e07bb2;
+    color: #fff;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+}
+
+.badge-year {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0.85;
+}
+
+.badge-number {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* ── COLUMNA TEXTO ── */
+.about-text-col {
+    background: rgba(8, 8, 20, 0.734);  
+    border-radius: 4px;
+    border-left: 2px solid rgba(224, 123, 178, 0.35);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.about-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #00ced1;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.about-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.05;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.about-title-accent {
+    color: #e07bb2;
+    text-shadow:
+        0 0 20px rgba(255, 20, 147, 0.6),
+        0 0 60px rgba(255, 20, 147, 0.2);
+}
+
+.about-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.about-divider span:first-child,
+.about-divider span:last-child {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e07bb2);
+}
+
+.about-divider span:last-child {
+    background: linear-gradient(90deg, #e07bb2, transparent);
+}
+
+.diamond {
+    color: #e07bb2;
+    font-size: 10px;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
+}
+
+.about-quote {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(0, 206, 209, 0.973);
+    border-left: 2px solid #e07bb2;
+    padding: 8px 0 8px 20px;
+    margin: 0 0 24px 0;
+    line-height: 1.7;
+}
+
+.about-bio {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(220, 220, 235, 0.892);
+    line-height: 1.8;
+    margin: 0 0 14px 0;
+}
+
+.about-bio strong {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+/* ── STATS ── */
+.about-stats {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 20, 147, 0.15);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-number {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #e07bb2;
+    text-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.656);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.stat-divider {
+    color: rgba(255, 20, 147, 0.3);
+    font-size: 24px;
+    font-weight: 100;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1627px) {
+    .about-section {
+        padding: 8em 4em;
+    }
+
+    .about-container {
+        grid-template-columns: 320px 1fr;
+        gap: 50px;
+    }
+
+    .about-section::before {
+        background-size: 90%;
+    }
+
+}
+@media(max-width: 1320px){
+    .about-section::before {
+        display: none;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-image-col {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .about-section {
+        padding: 70px 24px;
+    }
+   
+
+    .about-stats {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 50px 16px;
+    }
+
+    .about-text-col {
+        padding: 28px 20px;
+    }
+
+    .about-quote {
+        font-size: 14px;
+    }
+
+    .about-bio {
+        font-size: 14px;
+    }
+
+    .about-stats {
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .about-quote {
+        font-size: 13px;
+    }
+
+    .about-image-col {
+        max-width: 280px;
+    }
+}

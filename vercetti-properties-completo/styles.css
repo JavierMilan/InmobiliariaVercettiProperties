@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'rageitalic';
+    src: url('fonts/rageitalic.ttf') format('opentype');
+}
+* {
+    max-width: 100%;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    font-family: 'ViceCitySans', sans-serif;
+}
+
+h3 {
+    font-family: "rageitalic";
+}
+
+.site-footer {
+    background: #FFAD00;
+    border-top: 1px solid rgba(224, 123, 178, 0.15);
+    padding: 20px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-copy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: rgba(23, 22, 22, 0.956);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footer-disclaimer em {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7em;
+    color: rgba(23, 22, 22, 0.956);
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1427px){
+    * {
+    max-width: 100%;
+    }
+}
+@media (max-width: 1024px){
+    * {
+    max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    * {
+    max-width: 100%;
+    }
+    .site-footer {
+        padding: 16px 20px;
+    }
+
+    .footer-copy {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+        * {
+    max-width: 100%;
+    }
+    .footer-copy {
+        font-size: 0.65em;
+    }
+}

@@ -1,0 +1,446 @@
+/*SECCIÓN CONTENEDOR DEL FORMULARIO*/
+
+.formulario-section {
+    background-image: 
+    linear-gradient(
+        180deg, 
+        #E1D4C0 40%,  
+        rgb(235, 167, 144) 65%,
+        #ffff 100%    
+    ),
+    url(imagenes/fondoVice1080.png);    
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: 100%;
+    position: relative;
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario-section h2 {
+    top: 0em;
+    position: absolute; 
+    margin: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    font-size: 8em;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #FFFFFF;
+    text-shadow:
+        1px 1px 0 #aa9359,
+        2px 2px 0 #967a3f,
+        3px 3px 0 #7d6530,
+        4px 4px 0 #6b5428,
+        5px 5px 0 #594420,
+        6px 6px 8px rgba(0, 0, 0, 0.809),
+        8px 8px 20px rgba(0, 0, 0, 0.649),
+        0 0 60px rgba(0, 0, 0, 0.951),
+        0 0 60px rgba(0, 0, 0, 0.874);
+}
+
+/*FORMULARIO PRINCIPAL*/
+
+.formulario {
+    background-blend-mode: saturation;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 5em;
+    border-radius: 15px;
+    position: relative;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.755));
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    border: 2px solid rgb(255, 149, 225);
+    margin-bottom: 7em;
+    margin-top: 3em;
+    overflow: hidden;
+}
+
+.bg-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: saturation;
+    transition: opacity 1s ease-in-out;
+}
+
+#slider-a { opacity: 1; z-index: 1; }
+#slider-b { opacity: 0; z-index: 0; }
+
+.formulario > *:not(.bg-slider) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo superior del formulario */
+.cabeceraFormulario {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+.cabeceraFormulario > img {
+    position: absolute;
+    right: 8em;
+    top: 9em;
+    height: max-content;
+    z-index: 3;
+}
+
+/* FIELDSET */
+.formulario fieldset {
+    background-color: #00000050;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin-top: 2em;
+    padding: 2em;
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    transform: perspective(1200px) rotateY(1deg) rotateX(-0.5deg);
+    box-shadow: 
+        -10px 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.formulario fieldset:hover {
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+}
+
+.formulario fieldset::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid rgba(255, 149, 225, 0.3);
+    pointer-events: none;
+}
+
+/* SELECTS */
+.formulario select {
+    width: 100%;
+    padding: 0.6em 0.2em;
+    text-align: center;
+    color: #eaf1f1;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #101010;
+    font-weight: 700;
+    font-size: 2em;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.formulario select:hover {
+    background: #FFAD00;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.9));
+    box-shadow: 
+        0 10px 35px #00000060,
+        0 0 30px #0000006a,
+        inset 8px 8px 15px #c58700;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"%3E%3Cpath fill="%23FFFFFF" stroke="%23000" stroke-width="1" d="M8 12L0 0h16z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    padding-right: 45px;
+}
+
+.formulario select:focus {
+    background: #FFAD00;
+    color: #FFD700;
+    outline: 3px solid #FF95E1;
+    outline-offset: 3px;
+}
+
+.formulario option {
+    background: #FFAD00;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    padding: 0.8em;
+    text-shadow: 1px 1px 2px black;
+}
+
+.formulario option:hover,
+.formulario option:checked {
+    background: #FF95E1;
+    color: #000;
+}
+
+/* PIE DEL FORMULARIO */
+.pieFormulario {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 1em;
+    gap: 12em;
+}
+
+.formulario label {
+    background-color: #00000050;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    color: #FFFFFF;
+    text-shadow:
+        1px 2px 1px #000000,
+        3px 4px 5px #000000,
+        0 0 20px rgba(0, 0, 0, 0.064),
+        0 0 30px rgb(0, 0, 0, 0.064);
+    font-weight: 700;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.formulario label:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.9));
+}
+
+.formulario label input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #FFFFFF;
+    border: 3px solid #E07BB2;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 3px 10px rgba(0, 0, 0, 0.3),
+        inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.formulario label input[type="checkbox"]:hover {
+    background: #FF95E1;
+    border-color: #E07BB2;
+    transform: scale(1.1);
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(255, 149, 225, 0.5);
+}
+
+.formulario label input[type="checkbox"]:checked {
+    background: #FFAD00;
+    border-color: #000000;
+    box-shadow: 
+        0 0 20px rgba(255, 149, 225, 0.8),
+        inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.formulario label input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* BOTÓN DE BÚSQUEDA */
+.formulario button[type="submit"],
+#formularioBoton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #00000050;
+    color: #eaf1f1;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #101010;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2em;
+    padding: 0.2em 2.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 
+        0 10px 35px #0000001e,
+        0 0 30px #0000002d,
+        inset 0 2px 8px #bfbebd;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.formulario button[type="submit"]::before,
+#formularioBoton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    transition: left 0.5s ease;
+}
+
+.formulario button[type="submit"]:hover,
+#formularioBoton:hover {
+    background-color: #FFAD00;
+    color: #FFFFFF;
+    border-color: #FFAD00;
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 
+        0 10px 35px #00000060,
+        0 0 30px #0000006a,
+        inset 0 2px 8px #c58700;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.9));
+}
+
+.formulario button[type="submit"]:hover::before,
+#formularioBoton:hover::before {
+    left: 100%;
+}
+
+.formulario button[type="submit"]:active,
+#formularioBoton:active {
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 
+        0 5px 20px rgba(0, 0, 0, 0.5),
+        inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 1427px) {
+    .formulario {
+        width: 85vw;
+        margin: 1em auto;
+    }
+}
+
+@media (max-width: 1180px) {
+       .formulario {
+        width: 70vw;
+        margin: 1em auto;
+    }
+
+    .formulario fieldset {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    .formulario-section h2 {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 971px){
+    .cabeceraFormulario > img{
+        display: none;
+
+    }
+    .formulario button[type="submit"],
+    #formularioBoton {
+        font-size: 1.8em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .formulario-section h2 {
+        font-size: 4em;
+        position: relative;
+        margin-bottom: 1em;
+    }
+
+    .formulario {
+        padding: 5em 2em 3em;
+        margin: 1em;
+        width: calc(100% - 2em);
+    }
+
+    .formulario fieldset {
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+        padding: 2em 1.5em;
+    }
+
+    .formulario select {
+        font-size: 1em;
+    }
+    
+
+    .pieFormulario {
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: flex-start;
+        padding: 0 0.5em;
+    }
+
+    .formulario label {
+        font-size: 1.6em;
+    }
+
+    .formulario button[type="submit"],
+    #formularioBoton {
+        font-size: 1.8em;
+        width: 100%;
+    }
+
+    .cabeceraFormulario > img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .formulario-section h2 {
+        font-size: 3em;
+    }
+
+    .formulario {
+        padding: 4em 1em 2em;
+        margin: 0.5em;
+    }
+
+    .formulario select {
+        font-size: 1.3em;
+    }
+
+    .formulario label {
+        font-size: 1.4em;
+    }
+
+    .formulario button[type="submit"],
+    #formularioBoton {
+        font-size: 1.6em;
+    }
+}
